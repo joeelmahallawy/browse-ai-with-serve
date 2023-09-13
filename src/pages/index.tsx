@@ -15,7 +15,8 @@ import {
 import CardDemo from "../components/Card";
 
 const IndexPage = () => {
-  const ycDataUrl = `https://api.withserve.com/v1/workflows/d8eacc4e-cc7d-4664-b49e-cc2c5694c746?apiKey=${process.env.NEXT_PUBLIC_SERVE_API_KEY}`;
+  // normally the apiKey query would be replaced with env variable but we're not doing that for example sake
+  const ycDataUrl = `https://api.withserve.com/v1/workflows/d8eacc4e-cc7d-4664-b49e-cc2c5694c746?apiKey=a7372b20-bc00-483f-99d0-769b0667a8cc`;
 
   const [state, doFetch] = useAsyncFn(async () => {
     const response = await fetch(ycDataUrl);
